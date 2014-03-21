@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<link rel="stylesheet" type="text/css" href="style/panoptic.css" />
+<link rel="stylesheet" type="text/css" href="style/responsive.css" />
+<link rel="stylesheet" type="text/css" href="style/home.css" />
+
+
+<header>
+	<h1>Elisa Escapa Otani</h1>
+
+	<div id="subinfo">
+		<a href="mailto:escapa.elisa@gmail.com">escapa.elisa&#91;&#64;&#93;gmail.com</a>
+		
+		<a id="midLnk" ref="http://www.linked.in.com/in/eescapa">LinkedIn</a>
+		
+		<a href="http://www.github.com/elisaeo10/">GitHub</a>
+	</div>
+
+	<div style="clear:both"></div>
+</header>
+
+<div id="content">
+
+	<!-- Navigation of work samples on left -->
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="works.html">Works</a></li>
+		</ul>
+	</nav>
+	
+	
+	<!-- Content of Work Sample -->
+	<section>
+		<div id="speechBubble">
+			<p>Welcome to my portfolio. Feel free to check out my works!</p>
+		</div>
+	</section>
+
+</div>
+</body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		$('div.pull-me').click(function() {
+			$('div.box').slideToggle('slow');
+		});
+	});
+
+</script>
+</html>

@@ -1,0 +1,77 @@
+/* Media Queries for Standard Devices
+* From Code-Tricks.com (April 28, 2013) 
+*/
+
+/* screens less than 800px width wide */
+@media screen and (max-width: 567px) { 
+	/********* HEADER ********/
+	
+	#subinfo {
+		width:50%;
+	}
+	
+	#subinfo a {
+		padding-bottom:3%;
+	}
+	
+	/* The LinkedIn link in the middle */
+	#subinfo a#midLnk {
+		border:0;
+	}
+	
+/********* BODY ********/
+	header {
+		height:150px;
+	}
+	#content {
+		width:95%;
+		margin-top:150px;
+	}
+	
+	
+	
+/*** LEFT NAVIGATION ***/
+	
+	nav {
+		width:100%;
+		clear:both;
+		margin-bottom:10px;
+		
+		/* Collapse menu items */
+	}
+	
+	section {
+		width:100%;
+		clear:both;
+		margin-left:0;
+	}
+	
+	/* Fix for Firefox
+	* Problem: nav,content ignoring #content's 95% width so must re-calculate
+	* Taking into account 2.5% left/right margins
+	*/
+	@-moz-document url-prefix() { 
+	  nav, section {
+		 width:90% !important;
+	  }
+	}
+	
+	
+}
+
+
+/* All Smartphones in portrait ----------- */
+@media only screen 
+and (max-width : 567px) {
+	
+}
+
+
+/* All Smartphones in landscape ----------- */
+@media only screen 
+and (min-width : 321px) {
+
+}
+
+
+

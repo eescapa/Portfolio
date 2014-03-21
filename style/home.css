@@ -1,0 +1,41 @@
+/********* BODY ********/
+
+	#dogImg {
+		width:250px;
+		margin-top:30px;
+		border-radius:50%;
+	}
+	
+/*** SECTION ***/
+	
+	.box {
+		background:yellow;
+		background-size:90% 90%;
+		height:100px;
+		
+		display:none;
+	}
+	
+	.slide {
+		margin:0;
+		padding:0;
+		border-top:2px solid red;
+	}
+	
+	.pull-me {
+		display:block;
+		position:relative;
+		margin:0 auto;
+		cursor:pointer;
+		
+		width:150px;
+		height:20px;
+		border-radius:7px;
+		background:red;
+				
+		font-family:arial,sans-serif;
+		font-size:14px;
+		color:#ffffff;
+		text-decoration:none;
+		text-align:center;
+	}
