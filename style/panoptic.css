@@ -2,8 +2,8 @@
 * Base Color (white sand): #F0E7CA;
 * Lighter: #FFFBF0;
 * Darker: #A39979;
-* Complimentary (indigo) : #6971A3; 
-* Complimentary (lilac) : #004771;
+* Complimentary (lilac) : #6971A3; 
+* Complimentary (indigo) : #004771;
 */
 
 html, body {
@@ -28,8 +28,8 @@ a:hover { color:#9dabce; }
 a:visited { color:#004771 }
 a:visited:hover { color:#9dabce; }
 
-.left { float:left }
-.right { float:right }
+.left { display:inline; vertical-align:middle; float:left }
+.right { display:inline; vertical-align:middle; float:right }
 
 body {
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
@@ -112,52 +112,38 @@ body {
 /*** LEFT NAVIGATION ***/
 	nav {
 		float:left;
-		width:23%; /* of the page. Extra 2% whitespace between nav & section */
-		position:fixed;
-	
+		width:25%;
+		height:75%;
 		text-align:center;
-		background-color:#6971A3;
-		
-		border-top-left-radius:15px;
-		border-top-right-radius:15px;
-		border-bottom-left-radius:15px;
-		border-bottom-right-radius:15px;
 	}
 	
 	
 	nav h3 {
 		width:100%;
+		text-align:left;
+		padding-left:5px;
+		
+		border-bottom:2px solid #A39979;
 	}
-	
-	nav h3:hover {
-		cursor:pointer;
-	}
-	
 	
 	ul.subNav li {
-		display:none;
 		text-align:right;
-		padding:10px;
-
-		border-bottom:2px solid black;
-		background-color:#9dabce;
-	}
-	
-	ul.subNav li:first-child {
-		border-top:2px solid #A39979;
+		padding-bottom:10px;
 	}
 
 	
 /*** SECTION WITH CONTENT ***/
 	section {
 		float:right;
-		width:73%;
+		width:73%;  /* of the page. Extra 2% whitespace between nav & section */
 		height:100%;
 		padding:25px;
 		
 		background-color:#CACFF0;
 		border-left:4px solid #A39979;
 		border-right:4px solid #A39979;
+		
+		text-align:center; /* center section content */
 	}
 	
 	/* Fix for Firefox 
@@ -180,27 +166,26 @@ body {
 	img#profileImg {
 		width:30%;
 		border-radius:50%;
-		display:inline;
+
+		display: inline;
 		float:left;
 	}
 	
 	div#speechBubble {
-		display:inline;
-		float:right;
-		margin-left:2%;
-		
 		width:68%; /* 95% */
 		height:20%;
 		margin: 0 auto;
+		margin-left:2%;
+		padding:2%;
 		background-color:white;
+
+  		/* For p's vertical align */
+		display:inline-table;
+		float:right;
 		
 		-webkit-border-radius:10px;
 		-moz-border-radius:10px;
 		border-radius:15px;
-		
-		padding:2%;
-		/* For vertical align */
-		display:table;
 	}
 	
 	div#speechBubble p {
@@ -209,3 +194,22 @@ body {
 		vertical-align:middle;
 		display:block;
 	}
+	
+	
+/*** FOOTER ***/
+footer {
+	height:80px;
+	width:100%;
+	clear:both;
+	
+	margin:0 auto;
+	margin-top:10px;
+	padding:3%;
+	
+
+	background:#FFFBF0;
+	border-top:2px solid #A39979;
+
+	text-align:center;
+	font-size:0.9em;
+}

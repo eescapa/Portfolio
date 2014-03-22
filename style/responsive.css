@@ -4,6 +4,7 @@
 
 /* screens less than 800px width wide */
 @media screen and (max-width: 567px) { 
+
 	/********* HEADER ********/
 	
 	#subinfo {
@@ -28,21 +29,6 @@
 		margin-top:150px;
 	}
 	
-	
-	
-/*** LEFT NAVIGATION ***/
-	
-	nav {
-		height:auto;
-		width:100%;
-		margin-bottom:10px;
-
-		float:none;
-		position:static;
-		display:block !important;
-		clear:both;
-	}
-	
 	section {
 		width:100%;
 		clear:both;
@@ -59,6 +45,71 @@
 	  }
 	}
 	
+/*** LEFT NAVIGATION ***/
+	
+	nav {
+		display:block !important;
+		position:static;
+		clear:both;
+		float:none;
+				
+		height:auto;
+		width:100%;
+		margin:10px 0;
+
+		text-align:left;
+		border-top:2px solid #A39979;
+	}
+	
+	div.superNav {
+		overflow:auto;
+
+		padding:3%;
+		background-color:#F0E7CA;
+		border-bottom:2px solid #A39979;
+	}
+	
+	div.superNav h3 {
+		display:inline;
+		text-align:left;
+		clear:left;
+
+		width:auto;
+		border-bottom:none;
+		border-right:2px
+	}
+	
+	div.superNav ul.subNav {	
+		display:inline;
+		vertical-align:middle;
+		text-align:right;
+
+		clear:right;
+		float:right;
+		overflow:hidden;
+		
+		width:75%;
+	}
+	
+	div.superNav ul.subNav li {
+		display:inline;
+		vertical-align:middle;
+		
+		padding:3%;
+		border-left:2px solid #A39979;
+	}
+	div.superNav ul.subNav li:first-child {
+		border-left:none;
+	}
+	
+	
+	
+	ul.subNav li {
+		text-align:right;
+		padding-bottom:10px;
+	}
+	
+	/*** SECTION WITH CONTENT ***/
 	
 }
 
