@@ -2,6 +2,7 @@
 <html>
 <body>
 
+<link rel="stylesheet" type="text/css" href="style/jquery-ui/jquery-ui-1.10.4.custom.min.css" />
 <link rel="stylesheet" type="text/css" href="style/panoptic.css" />
 <link rel="stylesheet" type="text/css" href="style/responsive.css" />
 <link rel="stylesheet" type="text/css" href="style/home.css" />
@@ -25,32 +26,47 @@
 
 	<!-- Navigation of work samples on left -->
 	<nav>
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="works.html">Works</a></li>
-		</ul>
+			<h3>Web</h3>
+			<ul class="subNav">
+				<li>Web Forms</li>
+				<li>JS (jQuery)</li>
+				<li>CSS3</li>
+			</ul>
+			
+			<h3>Mobile</h3>
+			<ul class="subNav">
+				<li>Responsive (Web)</li>
+				<li>Android</li>
+			</ul>
+			
+			<h3>Graphics</h3>
+			<ul class="subNav">
+				<li>Blueprints</li>
+				<li>Fliers / Stickers</li>
+				<li>Videos</li>
+			</ul>
 	</nav>
 	
 	
 	<!-- Content of Work Sample -->
 	<section>
-		<div id="speechBubble">
+		<img id="profileImg" src="style/img/profile.png" />
+
+		<div id="speechBubble">		
 			<p>Welcome to my portfolio. Feel free to check out my works!</p>
+			
+			<p>I am a web/mobile developer with experience and interest in front-end development for mobile technology.
+			Whether by responsive web applications, or mobile apps for specific devices 
+			I am eager to present web content in a way that is easily accessible 
+			to their core audiences. 
 		</div>
 	</section>
 
 </div>
 </body>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		
-		$('div.pull-me').click(function() {
-			$('div.box').slideToggle('slow');
-		});
-	});
+<script type="text/javascript" src="scripts/jquery-ui/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="scripts/panoptic.js"></script>
 
-</script>
+<script type="text/javascript" src="scripts/jquery-ui/jquery-ui-1.10.4.custom.min.js"></script>
 </html>

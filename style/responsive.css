@@ -33,11 +33,14 @@
 /*** LEFT NAVIGATION ***/
 	
 	nav {
+		height:auto;
 		width:100%;
-		clear:both;
 		margin-bottom:10px;
-		
-		/* Collapse menu items */
+
+		float:none;
+		position:static;
+		display:block !important;
+		clear:both;
 	}
 	
 	section {
