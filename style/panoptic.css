@@ -28,8 +28,7 @@ a:hover { color:#9dabce; }
 a:visited { color:#004771 }
 a:visited:hover { color:#9dabce; }
 
-.left { display:inline; vertical-align:middle; float:left }
-.right { display:inline; vertical-align:middle; float:right }
+
 
 body {
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
@@ -47,44 +46,23 @@ body {
 		
 		background-image:url('img/header.jpg');
 	    background-repeat: repeat-x;
-
 	}
 	
 	header h1 {
-		letter-spacing:3px;
+		font-family: 'Neuton', serif;
+		letter-spacing:4px;
 	}
 
 	div#subinfo {
 		width:35%;
 		margin:0 auto;
+		text-align: center;
+		letter-spacing:2px;
 		
 		/* Centers div itself within page */
 		left:25%;
 		width:50%;
-		top:25%;
-		
-		/* Distributes elements within div evenly */
-		text-align: center;
-		-ms-text-justify: distribute-all-lines;
-		text-justify: distribute-all-lines;
-		
-	}
-
-	div#subinfo a {
-		max-width:300px;
-			
-		/* even distribution fixes for IE6 */
-		display: inline-block;
-		*display: inline;
-		
-		padding-bottom:0;
-		padding:0 2%;
-	}
-	
-	/* The LinkedIn link in the middle */
-	div#subinfo a#midLnk {
-		border-left:1px solid;
-		border-right:1px solid;
+		top:25%;	
 	}
 
 
@@ -95,16 +73,10 @@ body {
 		width: 90%;
 		height:100%;
 		
-		/* Distributes elements within div evenly */
 		text-align: center;
-		-ms-text-justify: distribute-all-lines;
-		text-justify: distribute-all-lines;
 	}
 	
 	nav, section {
-		/* even distribution fixes for IE6 */
-		display: inline-block;
-		*display: inline;
 		text-align:left;
 	}
 	
@@ -117,6 +89,17 @@ body {
 		text-align:center;
 	}
 	
+	.nav_fixed {
+		position:fixed;
+		top: 0;
+		width:25%;
+	}
+	
+	.nav_static {
+		position:static;
+		top:auto;
+		width:25%;
+	}
 	
 	nav h3 {
 		width:100%;
@@ -129,6 +112,14 @@ body {
 	ul.subNav li {
 		text-align:right;
 		padding-bottom:10px;
+	}
+	
+	ul.subNav li:hover {
+		cursor:pointer;
+		color:#6971A3;
+	}
+	ul.subNav li:active {
+		color:#004771;
 	}
 
 	
@@ -197,19 +188,43 @@ body {
 	
 	
 /*** FOOTER ***/
-footer {
-	height:80px;
-	width:100%;
-	clear:both;
+	footer {
+		height:80px;
+		width:100%;
+		clear:both;
+		
+		margin:0 auto;
+		margin-top:10px;
+		padding:2%;
+		
 	
-	margin:0 auto;
-	margin-top:10px;
-	padding:3%;
+		background:#FFFBF0;
+		border-top:3px solid #A39979;
 	
+		text-align:center;
+		font-size:0.9em;
+	}
+	
+	#footerLeft { display:inline-block; vertical-align:middle; text-align:left; width:45% }
+	#footerRight { display:inline-block; vertical-align:middle; text-align:right; width:45% }
+	
+	/*** Social Media Icons ***/
+	
+	ul#footerIconList li {
+		display:inline;
+		padding-right:3px;
 
-	background:#FFFBF0;
-	border-top:2px solid #A39979;
-
-	text-align:center;
-	font-size:0.9em;
-}
+		/* Fade effect on hover */		
+		opacity: 1;
+		transition: opacity .25s ease-in-out;
+		-moz-transition: opacity .25s ease-in-out;
+		-webkit-transition: opacity .25s ease-in-out;
+	}
+	
+	ul#footerIconList li:hover {
+		opacity:0.5;
+	}
+	
+	ul#footerIconList li a img {
+		width:25px;
+	}
