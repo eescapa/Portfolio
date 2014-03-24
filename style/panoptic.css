@@ -15,7 +15,7 @@ html, body {
 
 header, section, footer, aside, nav, main, article, figure
 { 
-	display: block !important; 
+	display: block !important;
 }
 
 * { box-sizing: border-box; } /* Correct padding */
@@ -110,6 +110,8 @@ body {
 	}
 	
 	ul.subNav li {
+		font-family: 'Neuton', serif;
+		font-size:1.1em;
 		text-align:right;
 		padding-bottom:10px;
 	}
@@ -135,23 +137,6 @@ body {
 		border-right:4px solid #A39979;
 		
 		text-align:center; /* center section content */
-	}
-	
-	/* Fix for Firefox 
-	* Problem: nav,content ignoring #content's 90% width so must re-calculate
-	*/
-	@-moz-document url-prefix() { 
-	  nav {
-	  	width:13%;
-	  }
-	  
-	  nav ul {
-	  	width:87%;
-	  }
-	  
-	  section {
-		 width:61%;
-	  }
 	}
 	
 	img#profileImg {
@@ -205,8 +190,9 @@ body {
 		font-size:0.9em;
 	}
 	
-	#footerLeft { display:inline-block; vertical-align:middle; text-align:left; width:45% }
-	#footerRight { display:inline-block; vertical-align:middle; text-align:right; width:45% }
+	/* Total width 90% */
+	#footerLeft { display:inline-block; vertical-align:middle; text-align:left; width:30% }
+	#footerRight { display:inline-block; vertical-align:middle; text-align:right; width:60% }
 	
 	/*** Social Media Icons ***/
 	
@@ -227,4 +213,24 @@ body {
 	
 	ul#footerIconList li a img {
 		width:25px;
+	}
+
+
+/*** Fixes for Firefox.	***/
+	@-moz-document url-prefix() { 
+	  
+	  #content {
+	  	width:100%;
+	  	padding: 0 5%;
+	  }
+	  
+	  nav, .nav_static { width:30%; }
+	  
+	  section {
+		 width:61%;
+	  }
+	  
+	  footer {
+	  	width:auto;
+	  }
 	}
