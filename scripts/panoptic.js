@@ -44,26 +44,24 @@ $(document).ready(function () {
 	
 	
 	/* OnClickListeners for section content */
-	$('#appProjBtn').click(function() {
-		$('div#appProjDiv').slideToggle('slow');
-		$('div#graphicsBtn').hide();
-		$('div#resumeDiv').hide();
-	});
+	$('.appProjBtn').click({'sectionName':'appProj'}, activateSection);
+	$('.graphicsBtn').click({'sectionName':'graphics'}, activateSection);
+	$('.resumeBtn').click({'sectionName':'resume'}, activateSection);
 	
-	$('#graphicsBtn').click(function() {
-		$('div#appProjDiv').hide();
-		$('div#graphicsDiv').slideToggle('slow');
-		$('div#resumeDiv').hide();
-	});
-	
-	$('#resumeBtn').click(function() {
-		$('div#appProjDiv').hide();
-		$('div#graphicsDiv').hide();
-		$('div#resumeDiv').slideToggle('slow');
-	});
 	
 	/* Make all links in footer open in new window */
 	$('footer').find('a').attr('target','_blank');
-
 });
+
+function activateSection(event) {
+	var sectionId = event.data.sectionName + 'Div';
+	$(document.getElementById(sectionId)).slideToggle('slow');
+	/* $('div#graphicsDiv').hide();
+	$('div#resumeDiv').hide(); */
+	
+	/* scroll to section navigation bar */
+	var new_position = $('#sectionNavBar').offset();
+	window.scrollTo(new_position.left,new_position.top);
+
+}
 

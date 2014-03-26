@@ -4,6 +4,7 @@
 * Darker: #A39979;
 * Complimentary (lilac) : #6971A3; 
 * Complimentary (indigo) : #004771;
+* Dark Gray (almost black): #555555
 */
 
 html, body {
@@ -154,7 +155,7 @@ h3 { font-family: 'Neuton', serif; font-size:1.4em; }
 	}
 	
 	
-/*** SECTION WITH CONTENT ***/
+/*** SECTION ***/
 	section {
 		float:right;
 		width:73%;  /* of the page. Extra 2% whitespace between nav & section */
@@ -167,12 +168,32 @@ h3 { font-family: 'Neuton', serif; font-size:1.4em; }
 		
 		text-align:center; /* center section content */
 	}
-	
-	div.divider { 
+
+	/** Section Navigation (App Projects, Graphics, Resume) **/
+	div#sectionNavBar { 
 		clear:both; 
-		padding:10px 0;
-		border-bottom:2px solid #555555; 
+		margin-top:20px;
+		border-top:2px solid #555555; 
 	}
+	
+	ul#sectionNavList li {
+		display:inline;
+		padding:0px 10px;
+		border-left:2px solid #555555;
+		
+		font-family: 'Neuton', serif;
+		font-size:1.2em;
+	}
+	ul#sectionNavList li:first-child { border-left:none }
+	
+	.navBtn:hover {
+		cursor:pointer;
+		color: #6971A3;
+	}
+	.navBtn:active {
+		color:#004771;
+	}
+
 	
 	/** Introduction **/
 	div#introDiv { display:inline-block; clear:both; }
@@ -208,21 +229,10 @@ h3 { font-family: 'Neuton', serif; font-size:1.4em; }
 		display:block;
 	}
 	
-	/** App Projects **/
+	/** Section Contents **/
 	div#appProjDiv, div#graphicsDiv, div#resumeDiv {
 		display:none;
 	}
-	
-	/** Graphics **/
-	div#graphicsDiv {
-		
-	}
-	
-	/** Resume **/
-	div#resumeDiv {
-		
-	}
-	
 	
 /*** FOOTER ***/
 	footer {
@@ -231,9 +241,7 @@ h3 { font-family: 'Neuton', serif; font-size:1.4em; }
 		clear:both;
 		
 		margin:0 auto;
-		margin-top:10px;
 		padding:2%;
-		
 	
 		background:#FFFBF0;
 		border-top:3px solid #A39979;
@@ -278,11 +286,9 @@ h3 { font-family: 'Neuton', serif; font-size:1.4em; }
 	  
 	  nav, .nav_static { width:30%; }
 	  
-	  section {
-		 width:61%;
-	  }
+	  section { width:61%; }
 	  
-	  footer {
-	  	width:auto;
-	  }
+	  footer { width:auto; }
+	  
+	  img#profileImg { width:25%; }
 	}
