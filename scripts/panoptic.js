@@ -35,19 +35,20 @@ $(document).ready(function () {
 			$navWidth = $('nav').width();
 			var windowTop = $(window).scrollTop(); // returns number
 			
-			/* if top of <nav> is touching/above the top of window, make nav static */
-			if (stickyTop <= windowTop) {
+			/* if top of <nav> is below the top of the window, make <nav> the following:
+				* .nav_fixed { position:fixed; top: 0; width: $navWidth } */
+			if (stickyTop > windowTop) {
 				makeNavStatic();
 			}
 			
-			/* if top of <nav> is below the top of the window, make <nav> the following:
-				* .nav_fixed { position:fixed; top: 0; width: $navWidth } */
+			/* if top of <nav> is touching/above the top of window, make nav static */
 			else {
 				$('nav').removeClass('nav_static');
 				$('nav').width($navWidth);
 				$('nav').addClass('nav_fixed');
 			}
 		}
+		
 	});
 });
 
