@@ -42,6 +42,26 @@ $(document).ready(function () {
 		$(window).scrollTop($(window).scrollTop()-1);
 	});
 	
+	
+	/* OnClickListeners for section content */
+	$('#appProjBtn').click(function() {
+		$('div#appProjDiv').slideToggle('slow');
+		$('div#graphicsBtn').hide();
+		$('div#resumeDiv').hide();
+	});
+	
+	$('#graphicsBtn').click(function() {
+		$('div#appProjDiv').hide();
+		$('div#graphicsDiv').slideToggle('slow');
+		$('div#resumeDiv').hide();
+	});
+	
+	$('#resumeBtn').click(function() {
+		$('div#appProjDiv').hide();
+		$('div#graphicsDiv').hide();
+		$('div#resumeDiv').slideToggle('slow');
+	});
+	
 	/* Make all links in footer open in new window */
 	$('footer').find('a').attr('target','_blank');
 

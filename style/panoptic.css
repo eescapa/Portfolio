@@ -29,11 +29,12 @@ a:visited { color:#004771 }
 a:visited:hover { color:#9dabce; }
 
 
-
 body {
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	background-color:#F5F5DC;
 }
+
+h3 { font-family: 'Neuton', serif; font-size:1.4em; }
 	
 /********* HEADER ********/
 	header {
@@ -102,31 +103,6 @@ body {
 		width:25%;
 	}
 	
-	/* nav h3 {
-		width:100%;
-		text-align:left;
-		padding-left:5px;
-		
-		font-family: 'Neuton', serif;
-		font-size:1.4em;
-		border-bottom:2px solid #A39979;
-	}
-	nav h3:hover {
-		cursor:pointer;
-		color:#6971A3;
-	}
-	nav h3:active {
-		color:#004771;
-	}
-	
-	table.subNav tr td {
-		padding-bottom:10px;
-	}
-	
-	table.subNav tr td:first-child {
-		text-align:right;
-	} */
-	
 	table.superNav { border-collapse:collapse; width:100%; table-layout:fixed; }
 	
 	/** Nav's Header rows **/
@@ -192,6 +168,14 @@ body {
 		text-align:center; /* center section content */
 	}
 	
+	div.divider { 
+		clear:both; 
+		padding:10px 0;
+		border-bottom:2px solid #555555; 
+	}
+	
+	/** Introduction **/
+	div#introDiv { display:inline-block; clear:both; }
 	img#profileImg {
 		width:30%;
 		border-radius:50%;
@@ -200,7 +184,7 @@ body {
 		float:left;
 	}
 	
-	div#speechBubble {
+	div#introP {
 		width:68%; /* 95% */
 		height:20%;
 		margin: 0 auto;
@@ -222,6 +206,21 @@ body {
 		text-align:center;
 		vertical-align:middle;
 		display:block;
+	}
+	
+	/** App Projects **/
+	div#appProjDiv, div#graphicsDiv, div#resumeDiv {
+		display:none;
+	}
+	
+	/** Graphics **/
+	div#graphicsDiv {
+		
+	}
+	
+	/** Resume **/
+	div#resumeDiv {
+		
 	}
 	
 	
