@@ -6,7 +6,7 @@ $(document).ready(function () {
 	
 	$(window).scroll(function(){ // scroll event
  
-		if($(document).width() > 567){  
+		if($(document).width() > 645){  
 			$navWidth = $('nav').width();
 			var windowTop = $(window).scrollTop(); // returns number
 			
@@ -27,7 +27,7 @@ $(document).ready(function () {
 			}
 			
 		//if in Responsive state	
-		} else if ($(document).width() < 567) {
+		} else if ($(document).width() < 645) {
 			$('nav').removeClass('nav_fixed');
 			$('nav').css('width', '');
 			$('nav').removeClass('nav_static');

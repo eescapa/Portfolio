@@ -45,12 +45,30 @@
 		margin:10px 0;
 
 		text-align:left;
+	}
+	
+	/* Nav's Header row Header, add border-top */
+	table.superNav tr:first-child th, tr:first-child td { 
 		border-top:2px solid #A39979;
 	}
 	
+	/* Center Nav Header */
+	table.superNav tr:first-child th { text-align:right; }
+	table.superNav tr:first-child td { text-align:left; }
+	
+	/* Center Nav Rows */
+	tr.subNav td:first-child { text-align:right; }
+	tr.subNav td { text-align:left; }
+
+	/* Center Graphics list */
+	ul.subNavList li {
+		text-align:center;
+	}
+	
+	
+	/* 
 	div.superNav {
 		overflow:auto;
-
 		padding:3%;
 		background-color:#F0E7CA;
 		border-bottom:2px solid #A39979;
@@ -62,7 +80,7 @@
 
 		width:auto;
 		border-bottom:none;
-		border-right:2px
+		border-right:2px;
 	}
 	
 	div.superNav .subNav {	
@@ -86,29 +104,23 @@
 	}
 	div.superNav ul.subNav li:first-child {
 		border-left:none;
-	}
+	} */
 	
 	
 	/*** SECTION WITH CONTENT ***/
 	section {
 		border:none;
 	}
+
+
+/*** Fixes for Firefox.	***/
+	@-moz-document url-prefix() { 
+		div#content, section {
+			width:auto !important;
+		}
+	
+	}
+
 	
 }
-
-
-/* All Smartphones in portrait ----------- */
-@media only screen 
-and (max-width : 567px) {
-	
-}
-
-
-/* All Smartphones in landscape ----------- */
-@media only screen 
-and (min-width : 321px) {
-
-}
-
-
 

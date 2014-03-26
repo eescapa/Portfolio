@@ -85,7 +85,9 @@ body {
 	nav {
 		float:left;
 		width:25%;
-		height:75%;
+		height:auto;
+		z-index:-1;
+		overflow:hidden;
 	}
 	
 	.nav_fixed {
@@ -125,20 +127,9 @@ body {
 		text-align:right;
 	} */
 	
-	table.superNav { border-collapse:collapse; width:100% }
+	table.superNav { border-collapse:collapse; width:100%; table-layout:fixed; }
 	
 	/** Nav's Header rows **/
-	table.superNav tr:first-child th, tr:first-child td { border-bottom:2px solid #A39979; }
-	table.superNav tr:first-child td { text-align:right; }
-	
-	table.superNav th {
-		text-align:left;
-		padding:10px 0;
-		padding-left:5px;
-		
-		font-family: 'Neuton', serif;
-		font-size:1.4em;
-	}
 	table.superNav tr:first-child:hover {
 		cursor:pointer;
 		color:#6971A3;
@@ -146,6 +137,28 @@ body {
 	table.superNav tr:first-child:active {
 		color:#004771;
 	}
+	
+	table.superNav tr:first-child th, tr:first-child td { 
+		border-bottom:2px solid #A39979; 
+		width:100%;
+	}
+	
+	/* Nav's Header row Header ("App Projects", "Graphics", "Resume") */
+	table.superNav tr:first-child th {
+		text-align:left;
+		padding:10px 0;
+		padding-left:5px;
+		
+		font-family: 'Neuton', serif;
+		font-size:1.4em;
+	}
+	/* Nav's Header row "(Go ->)" */
+	table.superNav tr:first-child td { 
+		text-align:right; 
+		padding-left: 20px; 
+		font-weight:bold; 
+	}
+	
 	
 
 	/** Nav's Body rows **/
