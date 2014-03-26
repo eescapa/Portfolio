@@ -106,7 +106,8 @@ h3 { font-family: 'Neuton', serif; font-size:1.4em; }
 	
 	table.superNav { border-collapse:collapse; width:100%; table-layout:fixed; }
 	
-	/** Nav's Header rows **/
+	
+	/** <nav>'s Header rows **/
 	table.superNav tr:first-child:hover {
 		cursor:pointer;
 		color:#6971A3;
@@ -120,7 +121,7 @@ h3 { font-family: 'Neuton', serif; font-size:1.4em; }
 		width:100%;
 	}
 	
-	/* Nav's Header row Header ("App Projects", "Graphics", "Resume") */
+	/* <nav>'s Header row Header ("App Projects", "Graphics", "Resume") */
 	table.superNav tr:first-child th {
 		text-align:left;
 		padding:10px 0;
@@ -129,7 +130,7 @@ h3 { font-family: 'Neuton', serif; font-size:1.4em; }
 		font-family: 'Neuton', serif;
 		font-size:1.4em;
 	}
-	/* Nav's Header row "(Go ->)" */
+	/* <nav>'s Header row "(Go ->)" */
 	table.superNav tr:first-child td { 
 		text-align:right; 
 		padding-left: 20px; 
@@ -138,7 +139,7 @@ h3 { font-family: 'Neuton', serif; font-size:1.4em; }
 	
 	
 
-	/** Nav's Body rows **/
+	/** <nav>'s Body rows **/
 	tr.subNav td {
 		padding:10px 2%;
 		text-align:right;
@@ -169,7 +170,7 @@ h3 { font-family: 'Neuton', serif; font-size:1.4em; }
 		text-align:center; /* center section content */
 	}
 
-	/** Section Navigation (App Projects, Graphics, Resume) **/
+	/** <section>'s Navigation Bar (App Projects, Graphics, Resume) **/
 	div#sectionNavBar { 
 		clear:both; 
 		margin-top:20px;
@@ -229,7 +230,7 @@ h3 { font-family: 'Neuton', serif; font-size:1.4em; }
 		display:block;
 	}
 	
-	/** Section Contents **/
+	/** <section>'s Section-Divs **/
 	div#appProjDiv, div#graphicsDiv, div#resumeDiv {
 		display:none;
 	}
@@ -254,8 +255,8 @@ h3 { font-family: 'Neuton', serif; font-size:1.4em; }
 	#footerLeft { display:inline-block; vertical-align:middle; text-align:left; width:30% }
 	#footerRight { display:inline-block; vertical-align:middle; text-align:right; width:60% }
 	
-	/*** Social Media Icons ***/
 	
+	/** Social Media Icons **/
 	ul#footerIconList li {
 		display:inline;
 		padding-right:3px;
