@@ -2,8 +2,8 @@
 * From Code-Tricks.com (April 28, 2013) 
 */
 
-/* screens less than 800px width wide */
-@media screen and (max-width: 567px) { 
+/* screens less than 645px width wide */
+@media screen and (max-width: 645px) { 
 
 /********* HEADER ********/
 	header {
@@ -65,7 +65,7 @@
 		border-right:2px
 	}
 	
-	div.superNav ul.subNav {	
+	div.superNav .subNav {	
 		display:inline-block;
 		vertical-align:middle;
 		text-align:right;
@@ -88,12 +88,6 @@
 		border-left:none;
 	}
 	
-	
-	
-	ul.subNav li {
-		text-align:right;
-		padding-bottom:10px;
-	}
 	
 	/*** SECTION WITH CONTENT ***/
 	section {
