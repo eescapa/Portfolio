@@ -5,7 +5,6 @@ $(document).ready(function () {
 	$('.graphicsBtn').click({'sectionName':'graphics'}, activateSection);
 	$('.resumeBtn').click({'sectionName':'resume'}, activateSection);
 	
-	
 	/*** Make all links in <footer> open in new window ***/
 	$('footer').find('a').attr('target','_blank');
 
@@ -23,10 +22,12 @@ $(document).ready(function () {
 	
 	/** Scroll event listener to format <nav> **/
 	$(window).scroll(function(){
- 		
- 		/** If in Responsive Mode, make <nav> static **/
- 		if ($(document).width() < 645) { 
-			makeNavStatic();
+
+ 		/** If in Responsive Mode, remove all nav_ classes **/
+ 		if ($(document).width() < 645) {
+			$('nav').removeClass('nav_fixed');
+			$('nav').css('width', ''); //reset
+			$('nav').removeClass('nav_static');
 			//And let responsive.css handle rest of <nav>'s style
 		}
  		
@@ -36,12 +37,15 @@ $(document).ready(function () {
 			var windowTop = $(window).scrollTop(); // returns number
 			
 			/* if top of <nav> is below the top of the window, make <nav> the following:
-				* .nav_fixed { position:fixed; top: 0; width: $navWidth } */
+				* .nav_static { position:static; top:auto; width:25% } */
 			if (stickyTop > windowTop) {
-				makeNavStatic();
+				$('nav').removeClass('nav_fixed');
+				$('nav').css('width', ''); //reset
+				$('nav').addClass('nav_static');
 			}
 			
-			/* if top of <nav> is touching/above the top of window, make nav static */
+			/* if top of <nav> is touching/above the top of window, make nav the following:
+				* .nav_fixed { position:fixed; top: 0; width: $navWidth } */
 			else {
 				$('nav').removeClass('nav_static');
 				$('nav').width($navWidth);
@@ -51,14 +55,6 @@ $(document).ready(function () {
 		
 	});
 });
-
-/*** Stylize <nav> to the following:
-	* .nav_static { position:static; top:auto; width:25% } ***/
-function makeNavStatic(event) {
-	$('nav').removeClass('nav_fixed');
-	$('nav').css('width', ''); //reset
-	$('nav').addClass('nav_static');
-}
 
 /*** Action for buttons in <nav> and <section>'s nav bar ***/
 function activateSection(event) {
@@ -73,4 +69,3 @@ function activateSection(event) {
 	var new_position = $('#sectionNavBar').offset();
 	window.scrollTo(new_position.left,new_position.top);
 }
-
