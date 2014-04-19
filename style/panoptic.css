@@ -30,6 +30,8 @@ a:visited { color:#004771 }
 a:visited:hover { color:#9dabce; }
 
 
+
+
 body {
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	background-color:#F5F5DC;
@@ -85,11 +87,17 @@ h3 { font-family: 'Neuton', serif; font-size:1.4em; }
 	
 /*** LEFT NAVIGATION ***/
 	nav {
+
 		float:left;
 		width:25%;
 		height:auto;
 		z-index:-1;
 		overflow:hidden;
+	}
+	
+	nav a[href^="http://"] {
+		background: url(img/external.png) center right no-repeat;
+		padding-right: 13px;
 	}
 	
 	.nav_fixed {
@@ -141,6 +149,7 @@ h3 { font-family: 'Neuton', serif; font-size:1.4em; }
 
 	/** <nav>'s Body rows **/
 	tr.subNav td {
+		color:#5C5C5A;
 		padding:10px 2%;
 		text-align:right;
 	}
