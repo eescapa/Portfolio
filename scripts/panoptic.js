@@ -12,8 +12,13 @@ $(document).ready(function () {
 	/*** If window's been resized (ie. tablet orientation changed)
 		* Scroll to the top of <section> ***/
 	$(window).resize(function() {
-		var new_position = $('section').offset();
-		window.scrollTo(new_position.left, new_position.top - 1);
+		if ($(this).width() > 645) {
+			var section_position = $('section').offset();
+			window.scrollTo(section_position.left, section_position.top - 1);
+		} else {
+			//Trigger scroll event
+			$(window).scroll();
+		}
 	});
 	
 	
@@ -22,7 +27,7 @@ $(document).ready(function () {
 	
 	/** Scroll event listener to format <nav> **/
 	$(window).scroll(function(){
-
+		
  		/** If in Responsive Mode, remove all nav_ classes **/
  		if ($(document).width() < 645) {
 			$('nav').removeClass('nav_fixed');
